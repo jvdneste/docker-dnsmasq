@@ -6,7 +6,7 @@ Forked and modified to
 
 Write your dnsmasq.conf on the host and mount it at /etc/dnsmasq.conf
 
-`docker run --name dnsmasq --cap-add=NET_ADMIN --net=host -d -v dnsmasq.conf:/etc/dnsmasq.conf jvdneste/docker-dnsmasq`
+`docker run --name dnsmasq --cap-add=NET_ADMIN --net=host -d -v dnsmasq.conf:/etc/dnsmasq.conf jvdneste/dnsmasq`
 
 Connect to the container
 
