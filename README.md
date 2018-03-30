@@ -1,3 +1,18 @@
+
+Forked and modified to
+- base from plain alpine --> supports arm archituctures (raspberry pi)
+- start busybox syslogd (to allow sys logging if needed)
+- start plain dnsmasq (no default params)
+
+Write your dnsmasq.conf on the host and mount it at /etc/dnsmasq.conf
+
+`docker run --name dnsmasq --cap-add=NET_ADMIN --net=host -d -v dnsmasq.conf:/etc/dnsmasq.conf jvdneste/docker-dnsmasq`
+
+Connect to the container
+
+`docker exec -it dnsmasq /bin/ash`
+
+
 # docker-dnsmasq
 
 It's a [dnsmasq][dnsmasq] Docker image. It is only 6 MB in size. It is just an `ENTRYPOINT` to the `dnsmasq` binary. Can you smell what the rock is cookin'?
