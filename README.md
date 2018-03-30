@@ -12,6 +12,7 @@ Connect to the container
 
 `docker exec -it dnsmasq /bin/ash`
 
+The image is about 4mb on a raspberry pi
 
 # docker-dnsmasq
 
